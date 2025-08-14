@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
+import { CssModules } from "./components/CssModules";
 
 export const App = () => {
 
@@ -23,6 +24,8 @@ export const App = () => {
             <button onClick={onClickButton}>ボタン</button>
             <p>{num}</p>
             <hr></hr>
+
+            <CssModules />{/* コンポーネントを表示 */}
 
         </>
     );
