@@ -1,11 +1,14 @@
 // Props を渡される側のコンポーネント
 export const ColoredMessage = (props) => {
-    // {color="blue" message="お元気ですか?"}
+
+    //  propsから color と children を取り出す（分割代入）
+    const { color, children } = props;
+
     const contentStyle = {
-        color: props.color,
+        color: color,// props.が不要
         fontSize: "20px",
     };
 
-    // props.children に変更
-    return <p style={contentStyle}>{props.children}</p>;
+    // props.が不要
+    return <p style={contentStyle}>{children}</p>;
 };
