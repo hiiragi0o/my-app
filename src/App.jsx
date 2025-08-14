@@ -1,19 +1,20 @@
+// Props を渡す側のコンポーネント
+import { ColoredMessage } from "./components/ColoredMessage"; // コンポーネントをimport
+
 export const App = () => {
     // ボタンを押した時に実行する関数を定義
     const onClickButton = () => {
         alert();
     };
-    // cssオブジェクト
-    const contentStyle = {
-        color: "blue",
-        fontSize: "20px", // font-size でなく、 fontSize キャメルケースにする
-    };
 
     return (
         <>
-            <h1 style={{ color: "red" }}>こんにちは！</h1>{/* 文字を赤くする */}
-            <p style={contentStyle}>お元気ですか</p>
-            {/* p タグの文字を青色にして、フォントサイズを大きくする */}
+            <h1 style={{ color: "red" }}>こんにちは！</h1>
+            <ColoredMessage />
+            {/* コンポーネント化したものを表示 */}
+            <ColoredMessage color="blue" message="お元気ですか?" />
+            <ColoredMessage color="pink" message="元気です！" />
+            {/* Props として color と message を渡す */}
             <button onClick={onClickButton}>ボタン</button>
         </>
     );
