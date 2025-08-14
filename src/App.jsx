@@ -12,9 +12,9 @@ export const App = () => {
             <h1 style={{ color: "red" }}>こんにちは！</h1>
             <ColoredMessage />
             {/* コンポーネント化したものを表示 */}
-            <ColoredMessage color="blue" message="お元気ですか?" />
-            <ColoredMessage color="pink" message="元気です！" />
-            {/* Props として color と message を渡す */}
+            <ColoredMessage color="blue">お元気ですか?</ColoredMessage>
+            <ColoredMessage color="pink">元気です！</ColoredMessage>
+            {/* Props として color を渡す */}{/* テキストをchildren で渡す */}
             <button onClick={onClickButton}>ボタン</button>
         </>
     );
