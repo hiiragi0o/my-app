@@ -3,6 +3,8 @@ import { useState } from "react";
 import { ColoredMessage } from "./components/ColoredMessage"; // コンポーネントをimport
 
 export const App = () => {
+    console.log("レンダリング");
+
     // State の定義
     const [num, setNum] = useState(0);// 0は初期値
 
