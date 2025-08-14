@@ -1,10 +1,15 @@
-// Props を渡す側のコンポーネント
+// useState を使う
+import { useState } from "react";
 import { ColoredMessage } from "./components/ColoredMessage"; // コンポーネントをimport
 
 export const App = () => {
-    // ボタンを押した時に実行する関数を定義
+    // State の定義
+    const [num, setNum] = useState(0);// 0は初期値
+
+    // ボタンを押した時に State をカウントアップ
     const onClickButton = () => {
-        alert();
+        setNum(num + 1);
+        // setNum((prev) => prev + 1);// 厳密にはこのように書く。動作は同じ
     };
 
     return (
@@ -16,6 +21,7 @@ export const App = () => {
             <ColoredMessage color="pink">元気です！</ColoredMessage>
             {/* Props として color を渡す */}{/* テキストをchildren で渡す */}
             <button onClick={onClickButton}>ボタン</button>
+            <p>{num}</p>
         </>
     );
 };
