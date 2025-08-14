@@ -1,17 +1,10 @@
-// export の種類（export default）
 import { useState } from "react";
-import { useEffect } from "react";
-import ColoredMessage from "./components/ColoredMessage"; // 書き方が変わる
+import { ColoredMessage } from "./components/ColoredMessage";
 
 export const App = () => {
 
     // State の定義
     const [num, setNum] = useState(0);// 0は初期値
-
-    // useEffect を使う
-    useEffect(() => {
-        alert();
-    }, [num]); // ボタンクリックでnumが変化するごとに、アラートが表示される
 
     // ボタンを押した時に State をカウントアップ
     const onClickButton = () => {
@@ -29,6 +22,8 @@ export const App = () => {
             {/* Props として color を渡す */}{/* テキストをchildren で渡す */}
             <button onClick={onClickButton}>ボタン</button>
             <p>{num}</p>
+            <hr></hr>
+
         </>
     );
 };

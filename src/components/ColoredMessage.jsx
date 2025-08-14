@@ -1,5 +1,5 @@
-// export の種類（export default）
-const ColoredMessage = (props) => {
+// Props を渡される側のコンポーネント
+export const ColoredMessage = (props) => {
 
     //  propsから color と children を取り出す（分割代入）
     const { color, children } = props;
@@ -12,5 +12,3 @@ const ColoredMessage = (props) => {
     // props.が不要
     return <p style={contentStyle}>{children}</p>;
 };
-
-export default ColoredMessage;
