@@ -1,7 +1,7 @@
-// useState を使う
+// export の種類（export default）
 import { useState } from "react";
 import { useEffect } from "react";
-import { ColoredMessage } from "./components/ColoredMessage"; // コンポーネントをimport
+import ColoredMessage from "./components/ColoredMessage"; // 書き方が変わる
 
 export const App = () => {
 
