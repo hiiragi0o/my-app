@@ -1,12 +1,17 @@
 // useState を使う
 import { useState } from "react";
+import { useEffect } from "react";
 import { ColoredMessage } from "./components/ColoredMessage"; // コンポーネントをimport
 
 export const App = () => {
-    console.log("レンダリング");
 
     // State の定義
     const [num, setNum] = useState(0);// 0は初期値
+
+    // useEffect を使う
+    useEffect(() => {
+        alert();
+    }, [num]); // ボタンクリックでnumが変化するごとに、アラートが表示される
 
     // ボタンを押した時に State をカウントアップ
     const onClickButton = () => {
