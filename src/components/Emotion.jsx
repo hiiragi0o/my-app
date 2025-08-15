@@ -2,7 +2,7 @@
 
 // ↓ この行も重要
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const Emotion = () => {
