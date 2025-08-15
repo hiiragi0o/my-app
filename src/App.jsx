@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
 import { CssModules } from "./components/CssModules";
 import { StyledJsx } from "./components/StyledJsx";
+import { StyledComponents } from "./components/StyledComponents";
 
 export const App = () => {
 
@@ -30,6 +31,9 @@ export const App = () => {
             <hr></hr>
 
             <StyledJsx />{/* コンポーネントを表示 */}
+            <hr></hr>
+
+            <StyledComponents />{/* コンポーネントを表示 */}
 
         </>
     );

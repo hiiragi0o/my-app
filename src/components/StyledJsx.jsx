@@ -1,3 +1,4 @@
+// 使用頻度は少ない
 export const StyledJsx = () => {
     return (
         <>
